@@ -46,3 +46,7 @@ Compiles to:
   color: green;
 }
 ```
+
+## License
+
+MIT
