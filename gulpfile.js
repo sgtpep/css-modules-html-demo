@@ -46,7 +46,7 @@ gulp.task('styles', ['templates'], function() {
 
 gulp.task('templates', function() {
   Object.keys(require.cache).map(function(path) {
-    if (/\.html$/.test(path)) delete require.cache[path];
+    if (/\.(css|html)$/.test(path)) delete require.cache[path];
   });
   return gulp.src("./*.html")
     .pipe(template(templateData))
