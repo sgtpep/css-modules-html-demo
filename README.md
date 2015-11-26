@@ -1,5 +1,5 @@
 # CSS Modules Template Demo
-A demo of using CSS Modules within plain HTML files that makes BEM obsolete and is powered by Gulp and Lo-Dash/Underscore templates.
+A demo of using [CSS Modules](https://github.com/css-modules/css-modules) within plain HTML files that makes [BEM](http://getbem.com/) obsolete and is powered by [Gulp](https://github.com/gulpjs/gulp) and [Lo-Dash/Underscore templates](https://lodash.com/docs#template).
 
 ## Usage example
 
