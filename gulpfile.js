@@ -62,8 +62,12 @@ gulp.task('watch', function() {
   gulp.watch(["./*.html", "./includes/*.html"], ['templates']);
 });
 
-gulp.task('default', [
+gulp.task('build', [
   'styles',
   'templates',
+]);
+
+gulp.task('default', [
+  'build',
   'watch',
 ]);
