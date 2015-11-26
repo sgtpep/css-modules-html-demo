@@ -1,6 +1,5 @@
 var autoprefixer = require('autoprefixer');
 var Core = require('css-modules-loader-core');
-var hook = require('css-modules-require-hook');
 require('es6-promise');
 var fs = require('fs');
 var genericNames = require('generic-names');
@@ -10,6 +9,8 @@ var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var template = require('gulp-template');
 var _ = require('lodash');
+var _postcss = require('postcss');
+var Parser = require('postcss-modules-parser');
 
 var core = new Core([
   Core.values,
@@ -21,12 +22,15 @@ var core = new Core([
   autoprefixer,
 ]);
 
-hook({
-  use: core.plugins,
-});
-
 var templateData = {
   require: require,
+};
+
+require.extensions['.css'] = function(module, path) {
+  var instance = _postcss(core.plugins.concat(new Parser));
+  var css = fs.readFileSync(path, 'utf8');
+  var tokens = instance.process(css, { from: path }).root.tokens;
+  return module._compile("module.exports = " + JSON.stringify(tokens), path);
 };
 
 require.extensions['.html'] = function(module, path) {
