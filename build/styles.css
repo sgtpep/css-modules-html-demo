@@ -1,0 +1,15 @@
+.block1__element {
+  color: red;
+}
+:export {
+  element: block1__element;
+}
+
+.block2__element {
+  color: green;
+}
+:export {
+  element: block2__element;
+}
+
+/*# sourceMappingURL=styles.css.map */

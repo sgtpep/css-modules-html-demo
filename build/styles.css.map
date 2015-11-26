@@ -1,0 +1,1 @@
+{"version":3,"sources":["block1.css","block2.css"],"names":[],"mappings":"AAAA;EACE,WAAW;CACZ;;;;;ACFD;EACE,aAAa;CACd","file":"styles.css","sourcesContent":[".element {\n  color: red;\n}\n",".element {\n  color: green;\n}\n"],"sourceRoot":"/source/"}
