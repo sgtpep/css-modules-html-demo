@@ -35,7 +35,7 @@ require.extensions['.html'] = function(module, path) {
   return module._compile("module.exports = " + JSON.stringify(html), path);
 };
 
-gulp.task('styles', function() {
+gulp.task('styles', ['templates'], function() {
   return gulp.src("./styles/*.css")
     .pipe(sourcemaps.init())
     .pipe(postcss(core.plugins))
