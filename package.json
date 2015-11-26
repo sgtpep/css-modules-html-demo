@@ -9,6 +9,7 @@
     "gulp-postcss": "^6.0.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-template": "^3.1.0",
+    "lodash": "^3.10.1",
     "postcss": "^5.0.12",
     "postcss-modules-extract-imports": "^1.0.0",
     "postcss-modules-local-by-default": "^1.0.0",
