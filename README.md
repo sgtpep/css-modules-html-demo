@@ -3,7 +3,7 @@ A demo of using [CSS Modules](https://github.com/css-modules/css-modules) within
 
 ## Usage example
 
-Source files:
+Require css files from html templates and use them as CSS Modules. Source files:
 
 `index.html`
 ```html
@@ -45,6 +45,29 @@ Compiles to:
 .block2__element {
   color: green;
 }
+```
+
+## Template includes
+
+Include one html template into another. Source files:
+
+`index.html`
+```html
+<div>index.html</div>
+<%= require("./includes/include") %>
+```
+
+`includes/include.html`
+```html
+<div>include.html</div>
+```
+
+Compiles to:
+
+`build/index.html`
+```html
+<div>index.html</div>
+<div>include.html</div>
 ```
 
 ## License
