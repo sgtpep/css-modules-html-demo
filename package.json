@@ -18,6 +18,8 @@
     "postcss-modules-values": "^1.1.1"
   },
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "install": "gulp build",
+    "start": "gulp watch"
   }
 }
