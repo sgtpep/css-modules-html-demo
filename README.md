@@ -10,9 +10,9 @@ Require css files from html templates and use them as CSS Modules. Source files:
 <link href="styles.css" rel="stylesheet">
 
 <% var block1 = require("./styles/block1") %>
-<% var block2 = require("./styles/block2") %>
-
 <div class="${block1.element}">Block 1 element</div>
+
+<% var block2 = require("./styles/block2") %>
 <div class="${block2.element}">Block 2 element</div>
 ```
 
@@ -37,6 +37,7 @@ Compiles to:
 <link href="styles.css" rel="stylesheet">
 
 <div class="block1__element">Block 1 element</div>
+
 <div class="block2__element">Block 2 element</div>
 ```
 
