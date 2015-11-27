@@ -76,7 +76,7 @@ Compiles to:
 
 ## Comparison with BEM
 
-Block, element, modifiers in BEM:
+Class naming convensions in BEM:
 
 ```html
 <div class="block">
@@ -89,7 +89,7 @@ Block, element, modifiers in BEM:
 </div>
 ```
 
-In CSS Modules:
+Achieving the same with CSS Modules:
 
 `block.html`
 ```html
@@ -117,7 +117,7 @@ In CSS Modules:
   color: green;
 }
 .modifiedElement {
-  composes: root;
+  composes: element;
   border: 1px solid;
 }
 ```
