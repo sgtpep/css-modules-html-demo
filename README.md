@@ -1,5 +1,6 @@
-# CSS Modules BEM Demo
-A demo of using [CSS Modules](https://github.com/css-modules/css-modules) within HTML files following the [BEM](http://getbem.com/) approach and powered by [Gulp](https://github.com/gulpjs/gulp) and [Lo-Dash/Underscore templates](https://lodash.com/docs#template).
+# CSS Modules HTML Demo
+
+A demo of using [CSS Modules](https://github.com/css-modules/css-modules) within HTML files following the [BEM](http://getbem.com/)-like approach and powered by [Gulp](https://github.com/gulpjs/gulp) and [Lo-Dash/Underscore templates](https://lodash.com/docs#template).
 
 ## Usage example
 
