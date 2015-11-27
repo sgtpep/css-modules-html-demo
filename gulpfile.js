@@ -57,17 +57,11 @@ gulp.task('templates', function() {
     .pipe(gulp.dest("./build"));
 });
 
-gulp.task('watch', function() {
+gulp.task('build', ['styles', 'templates']);
+
+gulp.task('watch', ['build'], function() {
   gulp.watch("./styles/*.css", ['styles']);
   gulp.watch(["./*.html", "./includes/*.html"], ['templates']);
 });
 
-gulp.task('build', [
-  'styles',
-  'templates',
-]);
-
-gulp.task('default', [
-  'build',
-  'watch',
-]);
+gulp.task('default', ['build']);
