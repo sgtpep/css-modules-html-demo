@@ -73,6 +73,54 @@ Compiles to:
 <div>include.html</div>
 ```
 
+## Comparison with BEM
+
+Block, element, modifiers in BEM:
+
+```html
+<div class="block">
+  Block
+  <div class="block__element">Element</div>
+</div>
+<div class="block block--modifier">
+  Modified block
+  <div class="block__element block__element--modifier">Modified element</div>
+</div>
+```
+
+In CSS Modules:
+
+`block.html`
+```html
+<% var block = require("./styles/block") %>
+<div class="${block.root}">
+  Block
+  <div class="${block.element}">Element</div>
+</div>
+<div class="${block.modifiedRoot}">
+  Modified block
+  <div class="${block.modifiedElement}">Modified element</div>
+</div>
+```
+
+`styles/block.css`
+```css
+.root {
+  color: red;
+}
+.modifiedRoot {
+  composes: root;
+  border: 1px solid;
+}
+.element {
+  color: green;
+}
+.modifiedElement {
+  composes: root;
+  border: 1px solid;
+}
+```
+
 ## License
 
 MIT
