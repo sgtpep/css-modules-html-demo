@@ -40,28 +40,28 @@ require.extensions['.html'] = function(module, path) {
 };
 
 gulp.task('styles', ['templates'], function() {
-  return gulp.src("./styles/*.css")
+  return gulp.src("styles/*.css")
     .pipe(sourcemaps.init())
     .pipe(postcss(core.plugins))
-    .pipe(concat("./styles.css"))
+    .pipe(concat("styles.css"))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest("./build"));
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task('templates', function() {
   Object.keys(require.cache).map(function(path) {
     if (/\.(css|html)$/.test(path)) delete require.cache[path];
   });
-  return gulp.src("./*.html")
+  return gulp.src("*.html")
     .pipe(template(templateData))
-    .pipe(gulp.dest("./build"));
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task('build', ['styles', 'templates']);
 
 gulp.task('watch', ['build'], function() {
-  gulp.watch("./styles/*.css", ['styles']);
-  gulp.watch(["./*.html", "./includes/*.html"], ['templates']);
+  gulp.watch("styles/*.css", ['styles']);
+  gulp.watch(["*.html", "includes/*.html"], ['templates']);
 });
 
 gulp.task('default', ['build']);
