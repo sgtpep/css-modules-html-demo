@@ -1,9 +1,10 @@
-<% var block1 = require("./styles/block1") %>
-<% var block2 = require("./styles/block2") %>
-
+<!DOCTYPE html>
 <link href="styles.css" rel="stylesheet">
 
+<% var block1 = require("./styles/block1") %>
 <div class="${block1.element}">Block 1 element</div>
+
+<% var block2 = require("./styles/block2") %>
 <div class="${block2.element}">Block 2 element</div>
 
 <%= require("./includes/include") %>
