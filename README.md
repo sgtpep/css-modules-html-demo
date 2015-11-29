@@ -7,6 +7,7 @@ A demo of using [CSS Modules](https://github.com/css-modules/css-modules) within
 Require css files from html templates and use them as CSS Modules. Source files:
 
 `index.html`
+
 ```html
 <link href="styles.css" rel="stylesheet">
 
@@ -18,6 +19,7 @@ Require css files from html templates and use them as CSS Modules. Source files:
 ```
 
 `styles/block1.css`
+
 ```css
 .element {
   color: red;
@@ -25,6 +27,7 @@ Require css files from html templates and use them as CSS Modules. Source files:
 ```
 
 `styles/block2.css`
+
 ```css
 .element {
   color: green;
@@ -34,6 +37,7 @@ Require css files from html templates and use them as CSS Modules. Source files:
 Compiles to:
 
 `build/index.html`
+
 ```html
 <link href="styles.css" rel="stylesheet">
 
@@ -43,6 +47,7 @@ Compiles to:
 ```
 
 `build/styles.css`
+
 ```css
 .block1__element {
   color: red;
@@ -57,12 +62,14 @@ Compiles to:
 Include one html template into another. Source files:
 
 `index.html`
+
 ```html
 <div>index.html</div>
 <%= require("./includes/include") %>
 ```
 
 `includes/include.html`
+
 ```html
 <div>include.html</div>
 ```
@@ -70,6 +77,7 @@ Include one html template into another. Source files:
 Compiles to:
 
 `build/index.html`
+
 ```html
 <div>index.html</div>
 <div>include.html</div>
@@ -93,6 +101,7 @@ Class naming convensions in BEM:
 Achieving the same with CSS Modules:
 
 `block.html`
+
 ```html
 <% var block = require("./styles/block") %>
 <div class="${block.root}">
@@ -106,6 +115,7 @@ Achieving the same with CSS Modules:
 ```
 
 `styles/block.css`
+
 ```css
 .root {
   color: red;
